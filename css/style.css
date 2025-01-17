@@ -1,3 +1,8 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
   font-family: "Roboto", sans-serif;
   color: #434455;
@@ -28,6 +33,12 @@ p {
   max-width: 1158px;
   padding: 0 15px;
   margin: 0 auto;
+}
+img {
+  display: block;
+  align-self: flex-start;
+  max-width: 100%;
+  height: auto;
 }
 /* header */
 .page-header {
@@ -103,7 +114,20 @@ p {
 /* main */
 .hero {
   background: #2e2f42;
+  display: flex;
+  padding: 188px 0;
+  height: auto;
+  justify-content: center;
+  align-items: center;
 }
+.container-hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
 .hero-title {
   font-weight: 700;
   font-size: 56px;
@@ -111,6 +135,8 @@ p {
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
+  max-width: 496px;
+  margin: 0 auto;
 }
 .hero-button {
   font-weight: 500;
@@ -121,10 +147,39 @@ p {
   background: #4d5ae5;
   cursor: pointer;
   text-transform: capitalize;
+  border-radius: 4px;
+  border: none;
+  display: block;
+  text-align: center;
+  min-width: 169px;
+  height: 56px;
+  margin: 48px auto 0;
 }
 .hero-button:hover,
 .hero-button:focus {
   background-color: #404bbf;
+}
+.categories {
+  padding: 120px 0;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.categories-list {
+  display: flex;
+  gap: 24px;
+}
+.categories-item {
+  width: calc((100% - 72px) / 4);
 }
 .adventages {
   font-weight: 500;
@@ -132,6 +187,7 @@ p {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .adventages-dscr {
   font-weight: 400;
@@ -143,6 +199,11 @@ p {
 /* our team */
 .page-team {
   background: #f4f4fd;
+  padding: 120px 0;
+}
+.page-container {
+  display: flex;
+  flex-direction: column;
 }
 .team-title {
   font-weight: 700;
@@ -152,9 +213,27 @@ p {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  align-items: center;
+  margin-bottom: 72px;
+}
+.page-list {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  text-align: center;
 }
 .photo {
   background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-radius: 0 0 4px 4px;
+  width: calc((100% - 72px) / 4);
+}
+.team-name {
+  padding: 32px 16px;
+  gap: 8px;
 }
 .initial {
   font-weight: 500;
@@ -164,6 +243,7 @@ p {
   text-align: center;
   color: #2e2f42;
   text-transform: capitalize;
+  margin-bottom: 8px;
 }
 .profession {
   font-weight: 400;
@@ -177,9 +257,26 @@ p {
 /* our portfolio */
 .page-portfolio {
   text-transform: capitalize;
+  padding: 120px 0;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
 }
 .portfollio-images {
   background: #fff;
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  row-gap: 43px;
+  column-gap: 24px;
 }
 .portfolio-title {
   font-weight: 700;
@@ -188,6 +285,16 @@ p {
   letter-spacing: 0.02em;
   text-align: center;
   color: #2e2f42;
+  align-items: center;
+  margin-bottom: 72px;
+}
+.portfollio-images {
+  width: calc((100% - 48px) / 3);
+}
+.app {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
 }
 .info {
   font-weight: 500;
@@ -195,6 +302,7 @@ p {
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: #2e2f42;
+  margin-bottom: 8px;
 }
 .appointment {
   font-weight: 400;
@@ -206,6 +314,10 @@ p {
 /* footer */
 .page-footer {
   background-color: #2e2f42;
+  padding: 100px 0;
+}
+.footer-container {
+  display: block;
 }
 .logo-footer {
   font-family: "Raleway", sans-serif;
@@ -216,6 +328,7 @@ p {
   text-transform: uppercase;
   color: #4d5ae5;
 }
+
 .footer-logo .logo-back {
   color: #f4f4fd;
 }
@@ -225,4 +338,25 @@ p {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: #f4f4fd;
+  display: block;
+  max-width: 264px;
+  margin-top: 16px;
 }
+
+/* .container-hero {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.07;
+  letter-spacing: 0.02em;
+  text-align: center;
+  color: #fff;
+  max-width: 496px;
+  margin: 0 auto; */
