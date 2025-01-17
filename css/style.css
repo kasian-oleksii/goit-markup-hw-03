@@ -264,10 +264,6 @@ img {
   justify-content: flex-start;
   align-items: flex-start;
 }
-.portfolio-container {
-  display: flex;
-  flex-direction: column;
-}
 .portfollio-images {
   background: #fff;
 }
@@ -342,21 +338,3 @@ img {
   max-width: 264px;
   margin-top: 16px;
 }
-
-/* .container-hero {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
-.hero-title {
-  font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: #fff;
-  max-width: 496px;
-  margin: 0 auto; */
